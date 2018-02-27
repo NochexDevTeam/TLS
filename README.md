@@ -15,3 +15,4 @@ Step 2 – Extract and Open the compressed folder to show your tlstest page
 Step 3 – Upload the test page to your website using a File Manager or FTP
 
 Step 4 – Go to the url of your TLS Test Page and see if your system supports TLS 1.2
+
