@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1.0" client="site" method="upgrade">
+    <name>TLS 1.2 Test</name>
+    <author>Nochex Ltd</author>
+    <version>1.0.0</version>
+    <description>A simple module to test you are compatible with TLS 1.2</description>
+    <files>
+        <filename>mod_nochextlstesting.xml</filename>
+        <filename module="mod_nochextlstesting">mod_nochextlstesting.php</filename>
+        <filename>index.html</filename>
+        <filename>helper.php</filename>
+        <filename>tmpl/default.php</filename>
+        <filename>tmpl/index.html</filename>
+    </files>
+    <config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="basic" type="radio" label="TLS Testing">
+					<option value="0">Testpage</option>
+				</field>	
+			</fieldset>	
+		</fields>
+    </config>
+
+<install>
+     <sql>
+         <file driver="mysql" charset="utf8">sql/mysql/install.mysql.utf8.sql</file>
+         <file driver="sqlazure" charset="utf8">sql/sqlazure/install.sqlazure.utf8.sql</file>
+     </sql>
+</install>
+
+<uninstall>
+     <sql>
+         <file driver="mysql" charset="utf8">sql/mysql/uninstall.mysql.utf8.sql</file>
+         <file driver="sqlazure" charset="utf8">sql/sqlazure/uninstall.sqlazure.utf8.sql</file>
+     </sql>
+</uninstall>
+
+<update> 
+    <schemas>
+        <schemapath type="mysql">sql/mysql/updates</schemapath> 
+	<schemapath type="sqlazure">sql/sqlazure/updates</schemapath> 
+    </schemas> 
+</update>
+</extension>
