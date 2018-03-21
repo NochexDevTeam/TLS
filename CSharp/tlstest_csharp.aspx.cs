@@ -50,7 +50,7 @@ public partial class tlstest_csharp : System.Web.UI.Page
 				
 				}else{
 				
-				Response.Write("<h2>" + responseFromServer + "</h2>" + GetCredential("https://tlstest.nochex.com"));
+				Response.Write("<h2>" + responseFromServer + "</h2>");
 				
 				}
 				
