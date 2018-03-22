@@ -20,7 +20,7 @@ $context = stream_context_create($opts);
 $file = file_get_contents('https://tlstest.nochex.com', false, $context);
 
 
-if($file != "NOCHEX_Connection_OK"){
+if($file == "NOCHEX_Connection_OK"){
 	echo "<h2>Congratulations your server already supports TLS 1.2. You will not be required to make any changes to your configuration.</h2>";
 }else{
 	$opt1s = array(
